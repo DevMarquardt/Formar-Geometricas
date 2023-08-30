@@ -1,17 +1,23 @@
 public class Circulo extends Forma {
-    double raio;
+    private double raio;
 
     public Circulo(double raio) {
         this.raio = raio;
+        adicionarFormaNaLista();
+    }
+
+    public double getRaio() {
+        return raio;
     }
 
     @Override
     double calcularPerimetro() {
-        return Math.PI*2* this.raio;
+        return Math.PI * 2 * this.getRaio();
     }
 
     @Override
     double calcularArea() {
-        return Math.PI*Math.pow(raio, 2);
+        return Math.PI * Math.pow(getRaio(), 2);
     }
+
 }

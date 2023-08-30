@@ -1,13 +1,18 @@
 public class Quadrado extends Forma {
-    double quadradoLado1;
+    private double quadradoLado1;
 
     public Quadrado(double quadradoLado1) {
         this.quadradoLado1 = quadradoLado1;
+        adicionarFormaNaLista();
+    }
+
+    public double getQuadradoLado1() {
+        return quadradoLado1;
     }
 
     @Override
     double calcularPerimetro() {
-        return  quadradoLado1*4;
+        return quadradoLado1 * 4;
     }
 
     @Override
